@@ -14,9 +14,10 @@ export default function RootLayout({
       <body className="bg-black text-white">
         <AuthProvider>
           <SessionGuard>
-            <div className="flex">
+            <div className="flex min-h-screen bg-black">
               <Sidebar />
-              <main className="flex-1 md:ml-64 min-h-screen">
+              {/* The pt-20 adds space for the mobile menu button at the top */}
+              <main className="flex-1 w-full pt-20 md:pt-0 overflow-x-hidden">
                 {children}
               </main>
             </div>
